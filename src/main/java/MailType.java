@@ -1,19 +1,12 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-
 public class MailType {
-    private ArrayList<String> mailTypes;
-    private int mailCode;
-
-    MailType(){
-        mailTypes.addAll(Arrays.asList("birth", "angel day"));
-    }
-
-    private void setMailTypes() {
-        mailTypes.addAll(Arrays.asList("birth", "angel day"));
-    }
+    protected MailTypes mailType;
+    MailType(){}
 
     public int getCode() {
-        return mailCode;
+        return Integer.parseInt(getMailType());
+    }
+
+    private String getMailType() {
+        return mailType.toString();
     }
 }
