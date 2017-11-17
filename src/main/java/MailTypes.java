@@ -1,14 +1,14 @@
 public enum MailTypes {
-    NEWYEAR("0"), BIRTH("1"), ANGEL("1");
+    NEWYEAR("Happy new year,"), BIRTH("Wish u luck, "), USUAL("Hello, ");
 
-    private String sex;
+    private String mail;
 
-    MailTypes(String sex){
-        this.sex = sex;
+    MailTypes(String mail){
+        this.mail = mail;
     }
 
     @Override
     public String toString() {
-        return sex;
+        return mail;
     }
 }

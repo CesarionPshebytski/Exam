@@ -1,13 +1,12 @@
 public class MailInfo {
-    private static int mailCodeCounter = 0;
-
     private Client client;
-    private final int mailCode;
+    private int mailCode;
+    private String mailType;
 
-    MailInfo(Client client){
+    MailInfo(Client client, String mailType){
         this.client = client;
-        this.mailCode = mailCodeCounter;
-        mailCodeCounter++;
+        this.mailType = mailType;
+
     }
 
     public Client getClient() {
@@ -20,6 +19,6 @@ public class MailInfo {
 
     public int getMailCode() {
         MailType x = new MailType();
-        return x.getCode();
+        return x.getCode(mailType);
     }
 }

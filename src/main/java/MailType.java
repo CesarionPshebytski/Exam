@@ -1,12 +1,14 @@
-public class MailType {
-    protected MailTypes mailType;
-    MailType(){}
+import java.util.ArrayList;
 
-    public int getCode() {
-        return Integer.parseInt(getMailType());
+public class MailType {
+    private ArrayList<String> mailTypes;
+    MailType(){
+        mailTypes.add("usual");
+        mailTypes.add("new year");
+        mailTypes.add("birth");
     }
 
-    private String getMailType() {
-        return mailType.toString();
+    public int getCode(String mailType) {
+        return mailTypes.indexOf(mailType)>0?mailTypes.indexOf(mailType):mailTypes.indexOf("usual");
     }
 }
