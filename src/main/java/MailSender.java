@@ -1,6 +1,7 @@
 public class MailSender {
-    public void sendMail(MailInfo mailInfo){
+    public String sendMail(MailInfo mailInfo){
 
-        System.out.println();
+        String text = mailInfo.t;
+        return text;
     }
 }

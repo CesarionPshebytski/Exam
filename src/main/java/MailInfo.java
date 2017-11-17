@@ -2,11 +2,11 @@ public class MailInfo {
     private Client client;
     private int mailCode;
     private String mailType;
+    private String mailText;
 
     MailInfo(Client client, String mailType){
         this.client = client;
         this.mailType = mailType;
-
     }
 
     public Client getClient() {
